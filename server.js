@@ -62,3 +62,25 @@ app.get('/students/:id', (req, res) => {
 app.listen(port, () => {
     console.log(`API running at http://localhost:${port}`);
 });
+// Student API Challenge
+// This is a simple Node.js API developed for an internship challenge.
+//
+// Features:
+// - Add students with name and grade (0 to 10)
+// - List all students
+// - Get a student by ID
+// - Returns a unique letter in the name (or '_' if all letters repeat)
+//
+// How to run:
+// 1. Install dependencies: npm install express
+// 2. Start the server: node server.js
+// 3. Test using Postman or curl
+//
+// Example curl:
+// curl -X POST -H "Content-Type: application/json" -d "{\"name\":\"Lucas\", \"grade\":8}" http://localhost:3000/students
+//
+// Justification:
+// I chose to use Node.js with Express because it is simple and easy to set up for small APIs.
+// I used an array to store the data in memory, since the challenge allows it and it avoids the need for database setup.
+// I added validation to ensure the grade is between 0 and 10.
+// The function to find the non-repeating letter was implemented to meet the requirement in all GET responses.
